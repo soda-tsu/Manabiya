@@ -1,0 +1,17 @@
+.squareOption {
+  position: relative;
+}
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif;
+}

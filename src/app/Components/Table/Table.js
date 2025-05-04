@@ -24,10 +24,10 @@ const myTheme = themeQuartz.withPart(iconSetMaterial).withParams({
   },
   columnBorder: true,
   fontFamily: {
-    googleFont: "Pixelify Sans",
+    googleFont: "Courier New, monospace",
   },
   foregroundColor: "#FFF",
-  headerFontSize: 14,
+  headerFontSize: 20,
   headerRowBorder: false,
   rowBorder: true,
   wrapperBorder: true,
@@ -49,6 +49,12 @@ function Table({ links, columns }) {
         suppressAutoSize={false}
         suppressSizeToFit={false}
         domLayout="autoHeight"
+        defaultColDef={{
+          cellStyle: {
+            fontFamily: "Courier New, monospace",
+            fontSize: "18px",
+          },
+        }}
       />
     </div>
   );

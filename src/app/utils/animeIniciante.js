@@ -13,31 +13,34 @@ export const columns = [
   },
   {
     field: "Nome",
+    width: 270,
+    maxWidth: 270,
+    minWidth: 270,
     cellRenderer: NameCellRenderer,
     cellStyle: {
       whiteSpace: "normal",
     },
     autoHeight: true,
+    cellStyle: {
+      display: "flex",
+      alignItems: "center",
+      fontSize: "20px",
+      letterSpacing: "0.2rem",
+    },
   },
 
   {
     field: "Comentários",
     wrapText: true,
+    cellStyle: {
+      display: "flex",
+      alignItems: "center",
+      padding: "0px 36px 0px 36px",
+    },
   },
 ];
 
 export const links = [
-  {
-    Nome: "わかば＊ガール - Wakaba＊Girl",
-    Comentários:
-      "A única dificuldade aqui é que Wakaba fala usando keigo, isso é compensado pela duração dos episódios que são curtos",
-    Capa: "/001.jpg",
-  },
-  {
-    Nome: "ご注文はうさぎですか - Gochuumon wa Usagi desu ka",
-    Comentários: "Sem comentários ainda",
-    Capa: "/002.jpg",
-  },
   {
     Nome: "しろくまカフェ - Shirukuma Café",
     Comentários:
@@ -49,5 +52,16 @@ export const links = [
     Comentários:
       "Cada episódio é uma coleção de duas ou três histórias de fantasmas bem curta. O vocabulário é básico predominantemente relacionado a vida cotidiana ou escola. A parte mais desafiadora aqui é a introdução dos episódios onde cada uma das histórias é brevemente apresentada como se fosse um prato de restaurante usando um pouco de keigo.",
     Capa: "/004.jpg",
+  },
+  {
+    Nome: "わかば＊ガール - Wakaba＊Girl",
+    Comentários:
+      "A única dificuldade aqui é que Wakaba fala usando keigo, isso é compensado pela duração dos episódios que são curtos",
+    Capa: "/001.jpg",
+  },
+  {
+    Nome: "ご注文はうさぎですか - Gochuumon wa Usagi desu ka",
+    Comentários: "Sem comentários ainda",
+    Capa: "/002.jpg",
   },
 ];

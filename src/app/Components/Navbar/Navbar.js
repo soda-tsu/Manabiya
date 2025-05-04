@@ -12,7 +12,7 @@ function Navbar() {
 
         <ul>
           <li>
-            <Link href="/anime">Anime</Link>
+            <Link href="/midias">Mídias</Link>
           </li>
           <li>
             <Link href="/links">Links</Link>
