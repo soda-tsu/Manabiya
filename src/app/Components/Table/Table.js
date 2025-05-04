@@ -1,53 +1,55 @@
 "use client";
-import Image from "next/image";
-import styles from "./Table.module.css";
 
-function Table({ columns, objectContent }) {
+import styles from "./Table.module.css";
+import { AgGridReact } from "ag-grid-react";
+
+import {
+  ModuleRegistry,
+  AllCommunityModule,
+  themeQuartz,
+  iconSetMaterial,
+} from "ag-grid-community";
+
+ModuleRegistry.registerModules([AllCommunityModule]);
+
+const myTheme = themeQuartz.withPart(iconSetMaterial).withParams({
+  backgroundColor: "#1f2836",
+  borderRadius: 0,
+  browserColorScheme: "dark",
+
+  chromeBackgroundColor: {
+    ref: "foregroundColor",
+    mix: 0.07,
+    onto: "backgroundColor",
+  },
+  columnBorder: true,
+  fontFamily: {
+    googleFont: "Pixelify Sans",
+  },
+  foregroundColor: "#FFF",
+  headerFontSize: 14,
+  headerRowBorder: false,
+  rowBorder: true,
+  wrapperBorder: true,
+  wrapperBorderRadius: 0,
+});
+
+const onGridReady = (params) => {
+  params.api.sizeColumnsToFit(); // Ajusta as colunas ao container inicialmente
+};
+
+function Table({ links, columns }) {
   return (
     <div className={styles.tableContainer}>
-      <table className={styles.styledTable}>
-        <thead>
-          <tr>
-            {columns.map((column, index) => (
-              <th key={index}>{column}</th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {objectContent.map((item, index) => (
-            <tr
-              key={index}
-              onClick={() =>
-                window.open(item.href, "_blank", "noopener,noreferrer")
-              }
-            >
-              {columns.map((column, index) => {
-                if (column === "Capa") {
-                  return (
-                    <td
-                      style={{
-                        width: "215px",
-                        padding: "0px",
-                        maxHeight: "301px",
-                      }}
-                      key={index}
-                    >
-                      <Image
-                        src={item[column]}
-                        alt={item[column]}
-                        width={215}
-                        height={301}
-                      />
-                    </td>
-                  );
-                } else {
-                  return <td key={index}>{item[column]}</td>;
-                }
-              })}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <AgGridReact
+        rowData={links}
+        columnDefs={columns}
+        theme={myTheme}
+        onGridReady={onGridReady}
+        suppressAutoSize={false}
+        suppressSizeToFit={false}
+        domLayout="autoHeight"
+      />
     </div>
   );
 }

@@ -17,3 +17,23 @@ body {
 html {
   font-size: 62.5%;
 }
+
+.ag-cell[col-id="Capa"],
+.ag-cell[col-id="Capa"] > .ag-cell-wrapper,
+.ag-cell[col-id="Capa"] > .ag-cell-wrapper > .ag-cell-value {
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 0 !important;
+  border: none !important;
+}
+
+/* Garante que a imagem ocupe 100% sem espaços */
+.ag-cell[col-id="Capa"] img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
+main {
+  margin-top: 2.4rem;
+}
