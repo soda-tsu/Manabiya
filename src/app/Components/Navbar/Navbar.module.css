@@ -9,7 +9,7 @@
 }
 .tittle {
   text-decoration: none;
-  color: inherit;
+  color: #f0994d;
   font-family: "Raleway", sans-serif;
   font-weight: 300;
   font-size: 2.4rem;
@@ -17,12 +17,12 @@
 .header nav ul {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 2.4rem;
   list-style: none;
 }
 .header nav ul li a {
   text-decoration: none;
   color: inherit;
   font-family: "Raleway", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.2rem;
 }

@@ -1,5 +1,5 @@
 import Table from "../../Components/Table/Table";
-import { links, columns } from "../../utils/animeIniciante";
+import { links, columns } from "../../utils/anime";
 
 function Iniciante() {
   return (

@@ -7,30 +7,32 @@ import {
   ModuleRegistry,
   AllCommunityModule,
   themeQuartz,
-  iconSetMaterial,
 } from "ag-grid-community";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-const myTheme = themeQuartz.withPart(iconSetMaterial).withParams({
-  backgroundColor: "#1f2836",
+const myTheme = themeQuartz.withParams({
+  accentColor: "#4C4C4C",
+  backgroundColor: "#1E1E1E",
+  borderColor: "#8A756326",
   borderRadius: 0,
   browserColorScheme: "dark",
-
   chromeBackgroundColor: {
     ref: "foregroundColor",
     mix: 0.07,
     onto: "backgroundColor",
   },
   columnBorder: true,
-  fontFamily: {
-    googleFont: "Courier New, monospace",
-  },
   foregroundColor: "#FFF",
-  headerFontSize: 20,
-  headerRowBorder: false,
-  rowBorder: true,
-  wrapperBorder: true,
+  headerBackgroundColor: "#1E1E1E",
+  headerFontFamily: {
+    googleFont: "Raleway",
+  },
+  headerFontSize: 24,
+  headerFontWeight: 400,
+  headerRowBorder: true,
+  headerTextColor: "#bd8c62",
+  headerVerticalPaddingScale: 1.5,
   wrapperBorderRadius: 0,
 });
 
@@ -53,6 +55,8 @@ function Table({ links, columns }) {
           cellStyle: {
             fontFamily: "Courier New, monospace",
             fontSize: "18px",
+            overflow: "hidden",
+            height: "360px",
           },
         }}
       />

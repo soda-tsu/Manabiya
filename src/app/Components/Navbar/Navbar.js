@@ -7,7 +7,14 @@ function Navbar() {
     <header className={styles.header}>
       <nav>
         <Link href="/" className={styles.tittle}>
-          Manabya
+          {/* Manabya */}
+          <Image
+            src="/Logo.png"
+            alt="Logo"
+            width={268}
+            height={85}
+            className={styles.logo}
+          />
         </Link>
 
         <ul>
